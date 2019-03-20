@@ -1,0 +1,98 @@
+#banner {
+  margin-top: 111px;
+  position: relative;
+  @include xs(margin-top, 70px);
+  z-index: 1;
+  .container {
+    position: relative;
+    .glow {
+      position: absolute;
+      right: 0;
+      top: -55%;
+      overflow: hidden;
+
+      @include md-block() {
+        right: 10%;
+        top: 20%;
+      }
+    }
+    .row {
+      &.md-blocks {
+        @include md-block() {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    .col {
+      @include md-block() {
+        align-items: center;
+      }
+    }
+    h1 {
+      font-family: 'Pragmatica';
+      font-size: 56px;
+      line-height: normal;
+      letter-spacing: -0.06em;
+      color: $white;
+      font-weight: 600;
+
+      @include md-block() {
+        text-align: center;
+        font-size: 40px;
+      }
+      span {
+        color: $blue;
+        font-weight: 400;
+      }
+    }
+    .description {
+      margin-top: 32px;
+      p {
+        color: $white;
+        line-height: 24px;
+        &:first-child {
+          padding-left: 45px;
+        }
+        &:nth-child(3n) {
+          padding-left: 60px;
+        }
+        &:nth-child(4n) {
+          padding-left: 155px;
+        }
+        &:nth-child(-n + 4) {
+          @include md-block() {
+            padding-left: 0;
+          }
+        }
+        @include md-block() {
+          text-align: center;
+        }
+        span {
+          color: $blue-two;
+        }
+      }
+    }
+    .buttons {
+      width: 378px;
+      margin-top: 64px;
+
+      @include xs-block() {
+        max-width: 290px;
+      }
+    }
+    .img-boxes {
+      width: 100%;
+      height: auto;
+      max-width: 470px;
+      max-height: 379px;
+
+      @include md-block() {
+        margin-top: 73px;
+      }
+    }
+    .highlight {
+      position: absolute;
+    }
+  }
+}

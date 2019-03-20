@@ -1,0 +1,52 @@
+#hiring {
+  margin-bottom: 176px;
+  z-index:9;
+  @include sm(margin-bottom, 58px);
+  .container {
+    .col {
+      align-items: center;
+    }
+    h2 + p {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: $white-60;
+      margin-top: 50px;
+      max-width: 682px;
+
+      @include xs-block() {
+        text-align: center;
+        font-size: 16px;
+        color: $white;
+        margin-top: 24px;
+      }
+    }
+    .btn-styles {
+      margin-top: 30px;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 66px;
+
+      @include xs(margin-top, 30px);
+      li {
+        display: flex;
+        margin-top: 22px;
+        flex-basis: 216px;
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: $white;
+        }
+        img {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+}

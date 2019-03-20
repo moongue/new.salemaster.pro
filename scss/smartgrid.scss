@@ -1,18 +1,21 @@
-$columns: 24;
+$columns: 12;
 $atom: (100% / $columns);
 
+$break_fix: 1250px;
 $break_lg: 1100px;
 $break_md: 960px;
 $break_sm: 780px;
 $break_xs: 560px;
 
 $offset: 30px;
+$offset_fix: $offset;
 $offset_lg: $offset;
 $offset_md: $offset;
 $offset_sm: $offset;
 $offset_xs: $offset;
 
 $offset_one_side: ($offset / 2);
+$offset_fix_one_side: ($offset_fix / 2);
 $offset_lg_one_side: ($offset_lg / 2);
 $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
@@ -42,7 +45,7 @@ $fields_sm: 15px;
 }
 
 @mixin wrapper(){
-    max-width: 970px;
+    max-width: 1170px;
     margin: 0 auto;
     @include wrapper-full();
 }
@@ -85,6 +88,11 @@ $fields_sm: 15px;
 @mixin size($n){
     $val: 100% / $columns * $n;
     width: #{calc(#{$val} - #{$offset})};
+}
+
+@mixin size-fix($n){
+    $val: 100% / $columns * $n;
+    @include fix(width, #{calc(#{$val} - #{$offset_fix})});
 }
 
 @mixin size-lg($n){
@@ -137,6 +145,38 @@ $fields_sm: 15px;
 @mixin shift-padding-right($n){
     $val: 100% / $columns * $n;
     padding-right: #{calc(#{$val} + #{$offset_one_side})};
+}
+
+@mixin shift-fix($n){
+    $val: 100% / $columns * $n;
+    @include fix(margin-left, #{calc(#{$val} + #{$offset_fix_one_side})});
+    @include fix(margin-right, #{calc(#{$val} + #{$offset_fix_one_side})});
+}
+
+@mixin shift-fix-left($n){
+    $val: 100% / $columns * $n;
+    @include fix(margin-left, #{calc(#{$val} + #{$offset_fix_one_side})});
+}
+
+@mixin shift-fix-right($n){
+    $val: 100% / $columns * $n;
+    @include fix(margin-right, #{calc(#{$val} + #{$offset_fix_one_side})});
+}
+
+@mixin shift-fix-padding($n){
+    $val: 100% / $columns * $n;
+    @include fix(padding-left, #{calc(#{$val} + #{$offset_fix_one_side})});
+    @include fix(padding-right, #{calc(#{$val} + #{$offset_fix_one_side})});
+}
+
+@mixin shift-fix-padding-left($n){
+    $val: 100% / $columns * $n;
+    @include fix(padding-left, #{calc(#{$val} + #{$offset_fix_one_side})});
+}
+
+@mixin shift-fix-padding-right($n){
+    $val: 100% / $columns * $n;
+    @include fix(padding-right, #{calc(#{$val} + #{$offset_fix_one_side})});
 }
 
 @mixin shift-lg($n){
@@ -265,6 +305,18 @@ $fields_sm: 15px;
 @mixin shift-xs-padding-right($n){
     $val: 100% / $columns * $n;
     @include xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})});
+}
+
+@mixin fix($name, $value){
+    @media screen and (max-width: $break_fix){
+        #{$name}: $value;
+    }
+}
+
+@mixin fix-block(){
+    @media screen and (max-width: $break_fix){
+        @content;
+    }
 }
 
 @mixin lg($name, $value){

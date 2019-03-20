@@ -1,10 +1,62 @@
 @font-face {
-  font-family: "Bariol";
-  src: url("../font/Roboto/RobotoItalic/bariol_regular-webfont.eot" );
-
-  src: url("../font/Roboto/RobotoItalic/bariol_regular-webfont.woff" ) format("woff"),
-  url("../font/Roboto/RobotoItalic/bariol_regular-webfont.ttf" ) format("truetype");
+  font-family: 'Exo 2';
+  src: local('Exo 2'), local('Exo2-Regular'), url('../font/exo2/exo2.woff2') format('woff2'), url('../font/exo2/exo2.woff') format('woff'), url('../font/exo2/exo2.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
+}
 
+@font-face {
+  font-family: 'Exo 2';
+  src: local('Exo 2 Medium'), local('Exo2-Medium'), url('../font/exo2/exo2medium.woff2') format('woff2'), url('../font/exo2/exo2medium.woff') format('woff'), url('../font/exo2/exo2medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: local('Exo 2 Medium'), local('Exo2-Medium'), url('../font/exo2/exo2medium.woff2') format('woff2'), url('../font/exo2/exo2medium.woff') format('woff'), url('e../font/exo2/xo2medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: local('Exo 2 Bold'), local('Exo2-Bold'), url('../font/exo2/exo2bold.woff2') format('woff2'), url('../font/exo2/exo2bold.woff') format('woff'), url('../font/exo2/exo2bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pragmatica';
+  src: local('Pragmatica'), url('../font/pragmatica/pragmatica.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: local('Formular'), url('../font/formular/formular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: local('Formular Medium'), url('../font/formular/formular-medium.otf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: local('Formular Bold'), url('../font/formular/formular-bold.otf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../font/montserrat/montserrat.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
