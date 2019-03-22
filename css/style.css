@@ -832,6 +832,8 @@ input[type=button] {
 }
 
 #qualification .container .slider-single .description-step {
+  cursor: -webkit-grab;
+  cursor: grab;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -1064,6 +1066,31 @@ input[type=button] {
   #qualification .container .slider-single .description-step .block .block-with-text {
     display: block;
   }
+}
+
+#qualification .container .slider-single .slick-arrow {
+  position: absolute;
+  outline: none;
+  font-size: 0;
+  height: 35px;
+  width: 35px;
+  -webkit-filter: brightness(10);
+  filter: brightness(10);
+  border: none;
+  top: calc((100% - 35px) / 2);
+}
+
+#qualification .container .slider-single .slick-arrow.slick-prev {
+  background: url("../images/icons/icon-arrow.svg") no-repeat;
+  left: 0;
+}
+
+#qualification .container .slider-single .slick-arrow.slick-next {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: url("../images/icons/icon-arrow.svg") no-repeat;
+  right: 0;
 }
 
 #qualification .dop-information {

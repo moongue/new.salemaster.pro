@@ -80,6 +80,7 @@
       .slick-list {
       }
       .description-step {
+        cursor: grab;
         display: flex !important;
         color: $white;
         &:nth-child(n + 2) {
@@ -218,6 +219,25 @@
 
             @include sm(display, block);
           }
+        }
+      }
+      .slick-arrow {
+        position: absolute;
+        outline: none;
+        font-size: 0;
+        height: 35px;
+        width: 35px;
+        filter: brightness(10);
+        border: none;
+        top: calc((100% - 35px) / 2);
+        &.slick-prev {
+          background: url("../images/icons/icon-arrow.svg") no-repeat;
+          left: 0;
+        }
+        &.slick-next {
+          transform: rotate(180deg);
+          background: url("../images/icons/icon-arrow.svg") no-repeat;
+          right: 0;
         }
       }
     }

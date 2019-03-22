@@ -33,11 +33,17 @@ function smoothMenu() {
     });
 }
 
+function changeCursor() {
+    $(".description-step").click(function () {
+        $(".description-step").css('cursor','grabbing');
+    });
+}
+
 function slider() {
     $('.slider-single').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         fade: false,
         adaptiveHeight: true,
         infinite: true,
@@ -84,4 +90,5 @@ $(window).on('load', function () {
     slider();
     smoothScroll();
     smoothMenu()
+    changeCursor()
 });
