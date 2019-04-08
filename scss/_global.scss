@@ -19,6 +19,18 @@ body {
   }
 }
 
+.wrapper-smaller {
+  max-width: 770px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include xs-block() {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -44,6 +56,11 @@ button, input[type=button] {
 .row {
   display: flex;
   justify-content: space-between;
+  &__aic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .col {
@@ -136,6 +153,12 @@ button, input[type=button] {
 //Кнопки
 
 .btn-styles {
+  &.white-theme {
+    box-shadow: none;
+    border: 1px solid $dark-two-20;
+    color: $dark-two;
+    font-weight: 400;
+  }
   width: 184px;
   height: 48px;
   border: 1px solid $white-20;
@@ -197,3 +220,22 @@ button, input[type=button] {
   }
 }
 
+//QUOTE
+.quote {
+  position: relative;
+  &:before {
+    content: '';
+    background: url("../images/icons/icon-quotes.svg");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: -28px;
+
+    @include xs-block() {
+      left: 0;
+      top: -23px;
+    }
+  }
+}
+//END QUOTE

@@ -204,23 +204,7 @@
           }
         }
       }
-      .quote {
-        position: relative;
-        &:before {
-          content: '';
-          background: url("../images/icons/icon-quotes.svg");
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          top: 4px;
-          left: -28px;
 
-          @include xs-block() {
-            left: 0;
-            top: -23px;
-          }
-        }
-      }
       .block-bd {
         margin-top: 124px;
         position: relative;
