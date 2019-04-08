@@ -2979,4 +2979,41 @@ input[type=button] {
   text-align: center;
 }
 
+#article .container .content-article .by-the-way {
+  font-family: 'Formular', sans-serif;
+  margin-top: 84px;
+  border: 1px solid #e5e5e5;
+}
+
+#article .container .content-article .by-the-way .tooltip {
+  background: -o-linear-gradient(189.45deg, #ffbd6f 7.13%, #e5787e 52.74%, #b0539c 97.49%, #5321e2 118.8%);
+  background: linear-gradient(260.55deg, #ffbd6f 7.13%, #e5787e 52.74%, #b0539c 97.49%, #5321e2 118.8%);
+  max-width: 476px;
+  width: 100%;
+  height: 48px;
+  margin: -24px auto 0;
+  font-size: 16px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+#article .container .content-article .by-the-way p {
+  padding: 69px 0 43px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 430px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=maps/style.css.map */

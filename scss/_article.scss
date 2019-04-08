@@ -131,7 +131,7 @@
         font-style: italic;
       }
       .block-quote {
-        background: linear-gradient(260.55deg, #FFBD6F 7.13%, #E5787E 52.74%, #B0539C 97.49%, #5321E2 118.8%);
+        background: $gradient-orange;
         width: 100%;
         margin-top: 36px;
         box-sizing: border-box;
@@ -158,6 +158,33 @@
           font-size: 14px;
           color: $white;
           text-align: center;
+        }
+      }
+      .by-the-way {
+        font-family: 'Formular', sans-serif;
+        margin-top: 84px;
+        border: 1px solid $white-two;
+        .tooltip {
+          background: $gradient-orange;
+          max-width: 476px;
+          width: 100%;
+          height: 48px;
+          margin: -24px auto 0;
+          font-size: 16px;
+          color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        p {
+          padding: 69px 0 43px;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: center;
+          color: $black-50;
+          max-width: 430px;
+          margin: 0 auto;
         }
       }
     }
