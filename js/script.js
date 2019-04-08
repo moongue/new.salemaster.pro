@@ -1,16 +1,3 @@
-// function menuLogic() {
-//     var $header = $('#header');
-//     var $mobileMenuTrigger = $('.mobile-menu-toggle', $header);
-//     var $menuBlock = $('.menu', $header);
-//     var openClass = 'is-open';
-//
-//     // Toggle main menu.
-//     $mobileMenuTrigger.on('click', function (e) {
-//         e.preventDefault();
-//         $menuBlock.toggleClass(openClass);
-//     });
-// };
-
 function smoothScroll() {
     $(".menu, #menu").on("click","a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
@@ -86,9 +73,8 @@ function slider() {
 }
 
 $(window).on('load', function () {
-    // menuLogic();
     slider();
     smoothScroll();
-    smoothMenu()
-    changeCursor()
+    smoothMenu();
+    changeCursor();
 });

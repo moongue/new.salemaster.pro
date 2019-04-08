@@ -1,6 +1,24 @@
 #header {
   position: relative;
-
+  &.header-another-page {
+    .container {
+      border-bottom: 1px solid $dark-two-20;
+      .logo {
+        a {
+          color: $dark-two-80 !important;
+        }
+      }
+      a {
+        color: $dark-two-60 !important;
+      }
+      .telephone-contact {
+        color: $dark-two-60 !important;
+      }
+      .line {
+        stroke: $black;
+      }
+    }
+  }
   //HAMBURGER BUTTON
   .ham {
     cursor: pointer;
@@ -18,11 +36,11 @@
     transform: rotate(180deg);
   }
   .line {
-    fill:none;
+    fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke:#fff;
-    stroke-width:5.5;
-    stroke-linecap:round;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
   }
   .ham-burger {
     .top {
@@ -65,7 +83,7 @@
       align-items: center;
       position: relative;
       .logo a {
-        font-family: 'Formular';
+        font-family: 'Formular', sans-serif;
         color: $white;
         font-size: 20px;
         line-height: normal;
@@ -104,14 +122,14 @@
         }
         &:before {
           bottom: 0;
-          transform:  translateX(-100%);
+          transform: translateX(-100%);
         }
         &:after {
           top: 0;
-          transform:  translateX(100%);
+          transform: translateX(100%);
         }
         &:hover:before, &:hover:after {
-          transform:  translateX(0);
+          transform: translateX(0);
         }
       }
       .services-case {
@@ -151,16 +169,42 @@
       top: 73px;
       width: 100%;
       z-index: 2;
-      background: $bg-gradient;
-      ul {
+      background: $bg-body;
+      > ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         li {
-          margin: 7px 0;
+          margin: 16px 0;
           a {
-            color: $white-80;
+            font-size: 40px;
+            line-height: 24px;
+            letter-spacing: -0.06em;
+            color: $white-40;
+            &.active {
+              color: $white;
+            }
           }
+        }
+      }
+      .location-social-network {
+        background: $white;
+        margin-top: 100px;
+        padding: 38px 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+        p {
+          font-family: 'Exo 2', sans-serif;
+          text-align: left;
+          font-size: 14px;
+          line-height: 24px;
+          color: $dark-two;
+          max-width: 140px;
+        }
+        .social-network {
+          display: flex;
+          justify-content: space-between;
+          width: 120px;
         }
       }
     }

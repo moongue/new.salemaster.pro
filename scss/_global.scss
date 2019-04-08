@@ -1,5 +1,5 @@
 body {
-  font-family: 'Exo 2';
+  font-family: 'Exo 2', sans-serif;
   background: $bg-body;
 }
 
@@ -24,7 +24,7 @@ a {
 }
 
 h2 {
-  font-family: 'Formular';
+  font-family: 'Formular', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 30px;
@@ -69,6 +69,10 @@ button, input[type=button] {
   @include sm(display, block);
 }
 
+.sm-hide {
+  @include sm(display, none);
+}
+
 .xs-show {
   display: none;
 
@@ -77,6 +81,21 @@ button, input[type=button] {
 
 .xs-hide {
   @include xs(display, none);
+}
+
+.glass {
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  border-radius: 50%;
+  cursor: crosshair;
+
+  /* Создание эффекта стекла */
+
+  box-shadow: 10px 10px 45px -19px rgba(207,117,52,1);
+
+  /* Изначально скрыто */
+  display: none;
 }
 
 .glow-bg {
@@ -143,6 +162,7 @@ button, input[type=button] {
   text-align: center;
   padding: 13px 0;
   width: 100%;
+  font-weight: 500;
   z-index: 3;
 }
 
@@ -170,8 +190,10 @@ button, input[type=button] {
     left: 1px;
     top: 1px;
   }
-  //border: 1px solid transparent;
-  //border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
-  //border-image-slice: 1;
+  &.bg-white-btn {
+    &:before {
+      background: $white;
+    }
+  }
 }
 

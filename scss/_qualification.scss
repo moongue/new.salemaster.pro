@@ -114,10 +114,6 @@
               max-height: 223px;
             }
           }
-          &.full-width {
-            max-width: 100%;
-            width: 100%;
-          }
           .number-step {
             width: 35px;
             font-size: 20px;
@@ -137,7 +133,7 @@
             }
           }
           .title {
-            font-family: 'Formular';
+            font-family: 'Formular', sans-serif;
             line-height: 30px;
             font-size: 20px;
             letter-spacing: -0.04em;
@@ -149,12 +145,14 @@
             line-height: 24px;
             font-size: 14px;
             letter-spacing: -0.01em;
+            font-family: 'Montserrat', sans-serif;
 
             @include sm(margin-top, 33px);
           }
           ul {
-            @include sm-block() {
-              margin-top: 46px;
+            margin-top: 46px;
+            &.wrap-none {
+              flex-wrap: nowrap !important;
             }
             &.row {
               flex-wrap: wrap;
@@ -163,8 +161,8 @@
             li {
               display: flex;
               margin: 7px 0;
-              font-weight: 500;
               font-size: 16px;
+              font-family: 'Pragmatica', sans-serif;
               line-height: 24px;
               img {
                 padding-right: 16px;
@@ -173,8 +171,9 @@
           }
           .blocks-stage {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            max-width: 550px;
 
             @include sm(margin-top, 38px);
             @include xs-block() {
@@ -182,6 +181,7 @@
             }
             .block-stage {
               position: relative;
+              margin-right: 12px;
               margin-top: 14px;
               width: 157px;
               height: 157px;
@@ -190,6 +190,7 @@
               border: 4px solid transparent;
               border-image: $bg-gradient;
               border-image-slice: 1;
+              @include xs(margin, 5px);
               &:hover {
                 background: $bg-gradient;
               }
@@ -197,6 +198,7 @@
                 position: absolute;
                 top: 20px;
                 left: 20px;
+                max-width: 45px;
               }
               .title-block {
                 position: absolute;
@@ -209,7 +211,6 @@
             }
           }
           .block-with-text {
-            display: none;
             font-family: 'Formular';
             color: $white;
             font-size: 20px;
@@ -243,7 +244,6 @@
     }
   }
   .dop-information {
-    display: none !important;
     padding: 33px 33px 33px 48px;
     background: $dark-blue;
     margin-top: 50px;
@@ -258,8 +258,12 @@
     border-image-slice: 1;
 
     @include sm(display, block !important);
+    > p {
+      margin-top: 0 !important;
+    }
   }
   .block-quote {
+    position: relative;
     .quote {
       margin-top: 30px;
       margin-bottom: 130px;
@@ -276,6 +280,13 @@
           width: 100%;
           left: 0;
         }
+      }
+      .image-men {
+        right: 20%;
+        bottom: 0;
+        position: absolute;
+        max-width: 361px;
+        max-height: 420px;
       }
     }
   }

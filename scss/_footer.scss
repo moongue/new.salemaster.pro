@@ -1,5 +1,5 @@
 #footer {
-  font-family: 'Formular';
+  font-family: 'Formular', sans-serif;
 
   @include sm(padding-bottom, 80px);
   .cap-footer {
@@ -102,7 +102,7 @@
         color: $dark-two;
       }
       ul {
-        max-height: 160px;
+        max-height: 180px;
         margin-top: 24px;
         display: flex;
         flex-direction: column;
@@ -113,7 +113,7 @@
 
           @include md(width, 200px);
           a {
-            font-family: 'Exo 2';
+            font-family: 'Exo 2', sans-serif;
             font-size: 14px;
             color: $dark-two;
           }
@@ -139,7 +139,7 @@
           align-items: flex-start;
         }
         p {
-          font-family: 'Exo 2';
+          font-family: 'Exo 2', sans-serif;
           text-align: right;
           font-size: 14px;
           line-height: 24px;
@@ -164,7 +164,7 @@
 
     @include sm(display, flex);
     p {
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-size: 12px;
       line-height: 24px;
       color: $dark-two-60;

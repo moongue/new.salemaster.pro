@@ -40,7 +40,8 @@
       }
     }
     .cap-company {
-      background: $grey;
+      background: url("../images/images/image-bg-clients.svg") no-repeat;
+      background-size: cover;
       position: relative;
 
       @include sm(background, $black-bg);
@@ -54,7 +55,7 @@
       .title-company {
         padding-top: 241px;
         padding-bottom: 39px;
-        font-family: 'Formular';
+        font-family: 'Formular', sans-serif;
         font-size: 56px;
         line-height: 72px;
         letter-spacing: -0.04em;
@@ -103,7 +104,7 @@
       margin-top: 45px;
       max-width: 522px;
       color: $black;
-      font-family: 'Formular';
+      font-family: 'Formular', sans-serif;
       font-size: 16px;
       line-height: 24px;
 
