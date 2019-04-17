@@ -1,0 +1,26 @@
+#contextual-advertising {
+  .container {
+    .cap-contextual-advertising {
+      margin-top: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid $dark-two-20;
+    }
+    .subtitle {
+      margin-top: 40px;
+      font-family: 'Formular', sans-serif;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.04em;
+      color: $dark-two;
+    }
+    .title {
+      font-family: 'Formular', sans-serif;
+      margin-top: 8px;
+      font-size: 56px;
+      line-height: 72px;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: $dark-two;
+    }
+  }
+}

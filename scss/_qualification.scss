@@ -204,14 +204,14 @@
                 position: absolute;
                 bottom: 20px;
                 left: 20px;
-                font-family: 'Formular';
+                font-family: 'Formular',sans-serif;
                 text-transform: uppercase;
                 font-size: 14px;
               }
             }
           }
           .block-with-text {
-            font-family: 'Formular';
+            font-family: 'Formular',sans-serif;
             color: $white;
             font-size: 20px;
             line-height: 30px;
@@ -231,14 +231,15 @@
         filter: brightness(10);
         border: none;
         top: calc((100% - 35px) / 2);
+        z-index: 99;
         &.slick-prev {
           background: url("../images/icons/icon-arrow.svg") no-repeat;
-          left: 0;
+          left: 2%;
         }
         &.slick-next {
           transform: rotate(180deg);
           background: url("../images/icons/icon-arrow.svg") no-repeat;
-          right: 0;
+          right: 2%;
         }
       }
     }
